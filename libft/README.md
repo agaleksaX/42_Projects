@@ -2,18 +2,12 @@
 
 *This project has been created as part of the 42 curriculum by <agaleksa>.*
 
-*Այս նախագիծը ստեղծվել է 42-ի ուսումնական ծրագրի շրջանակում <agaleksa>-ի կողմից։*
-
 ---
 
 ## Description / Նկարագրություն
 
 Libft is a personal C library that reimplements a set of standard libc functions, additional useful functions, and linked list operations.  
 It helps understand how standard C functions work under the hood and allows you to use your own library in future assignments.
-
-**Armenian / Հայերեն**  
-Libft-ը C լեզվով գրանցված անձնական գրադարան է, որը վերակենդանացնում է որոշ ստանդարտ libc ֆունկցիաներ, ինչպես նաև ավելացնում է օգտակար ֆունկցիաներ և կապված ցուցակների գործառույթներ։  
-Այս նախագիծը օգնում է հասկանալ, թե ինչպես են աշխատում հիմնական C ֆունկցիաները և թույլ է տալիս դրանք օգտագործել ապագա առաջադրանքներում։
 
 ---
 
@@ -23,109 +17,104 @@ Libft-ը C լեզվով գրանցված անձնական գրադարան է, �
 - Create useful string, memory, and linked list manipulation functions.  
 - Understand memory allocation, pointers, and linked list operations.  
 
-**Armenian / Հայերեն**  
-- Վերակենդանացնել libc ֆունկցիաները `ft_` հավելվածով:  
-- Ստեղծել օգտակար ֆունկցիաներ շղթայական ցուցակների, բեռնման և հուշող ֆունկցիաների համար:  
-- Հասկացնել հիշողության բաշխումը, ցուցիչները և կապված ցուցակների գործառույթները:
-
 ---
 
 ## Tasks Completed / Արտադրված աշխատանքներ
 
 ---
 
-Part 1 – Libc Functions / Մաս 1 – libc ֆունկցիաներ
+Part 1 – Libc Functions
 
- ft_isalpha — check if character is a letter / ստուգում է, թե արդյոք նիշը տառ է
+ ft_isalpha — check if character is a letter
 
- ft_isdigit — check if character is a digit / ստուգում է, թե արդյոք նիշը թիվ է
+ ft_isdigit — check if character is a digit
 
- ft_isalnum — check if character is alphanumeric / ստուգում է, թե նիշը տառ կամ թիվ է
+ ft_isalnum — check if character is alphanumeric
 
- ft_isascii — check if character is ASCII / ստուգում է, թե նիշը ASCII է
+ ft_isascii — check if character is ASCII
 
- ft_isprint — check if character is printable / ստուգում է, թե նիշը տպելի է
+ ft_isprint — check if character is printable
+ 
+ ft_strlen — get length of string
+ 
+ ft_memset — fill memory with a byte
 
- ft_strlen — get length of string / ստանում է տողի երկարությունը
+ ft_bzero — zero out memory
 
- ft_memset — fill memory with a byte / հիշողությունը լցնում է նշված բայթով
+ ft_memcpy — copy memory
+ 
+ ft_memmove — safely copy memory
 
- ft_bzero — zero out memory / հիշողությունը զրոյացնում է
+ ft_strlcpy — copy string with size limit
+ 
+ ft_strlcat — concatenate strings with size limit
 
- ft_memcpy — copy memory / պատճենում է հիշողությունը
+ ft_toupper — convert char to uppercase
 
- ft_memmove — safely copy memory / անվտանգ պատճենում է հիշողությունը
+ ft_tolower — convert char to lowercase
 
- ft_strlcpy — copy string with size limit / պատճենում է տողը սահմանված չափով
+ ft_strchr — find character in string 
 
- ft_strlcat — concatenate strings with size limit / միացնում է տողերը սահմանված չափով
+ ft_strrchr — find last occurrence of character
 
- ft_toupper — convert char to uppercase / նիշը վերածում է մեծատառի
+ ft_strncmp — compare strings up to n characters
 
- ft_tolower — convert char to lowercase / նիշը վերածում է փոքրատառի
+ ft_memchr — locate byte in memory
 
- ft_strchr — find character in string / գտնում է նիշը տողում
+ ft_memcmp — compare memory blocks
 
- ft_strrchr — find last occurrence of character / գտնում է վերջին հանդիպումը
+ ft_strnstr — locate substring with length limit
+ 
+ ft_atoi — convert string to integer
 
- ft_strncmp — compare strings up to n characters / համեմատում է տողերը մինչև n նիշ
+ ft_calloc — allocate and zero memory
 
- ft_memchr — locate byte in memory / գտնում է բայթը հիշողության մեջ
-
- ft_memcmp — compare memory blocks / համեմատում է հիշողության բլոկները
-
- ft_strnstr — locate substring with length limit / գտնում է ենթատողը սահմանված երկարությամբ
-
- ft_atoi — convert string to integer / տողը վերածում է ամբողջ թվի
-
- ft_calloc — allocate and zero memory / հատկացնում և զրոյացնում է հիշողությունը
-
- ft_strdup — duplicate string / պատճենում է տողը
-
----
-
-Part 2 – Additional Functions / Մաս 2 – լրացուցիչ ֆունկցիաներ
-
- ft_substr — create substring / ստեղծում է ենթատող
-
- ft_strjoin — join two strings / միացնում է երկու տող
-
- ft_strtrim — trim characters from string / հանում է նիշերը տողից սկզբից և վերջից
-
- ft_split — split string by delimiter / բաժանում է տողը սահմանիչ նիշի վրա
-
- ft_itoa — convert integer to string / ամբողջ թիվը վերածում է տողի
-
- ft_strmapi — apply function to each char, return new string / կիրառել ֆունկցիան յուրաքանչյուր նիշի վրա, վերադարձնում է նոր տող
-
- ft_striteri — apply function to each char in place / կիրառել ֆունկցիան յուրաքանչյուր նիշի վրա՝ փոփոխելով սկզբնական տողը
-
- ft_putchar_fd — output character to file descriptor / տպել նիշը ֆայլի բնութագրիչին
-
- ft_putstr_fd — output string to file descriptor / տպել տողը ֆայլի բնութագրիչին
-
- ft_putendl_fd — output string with newline / տպել տողը նոր տողի հետ
-
- ft_putnbr_fd — output integer to file descriptor / տպել ամբողջ թիվը ֆայլի բնութագրիչին
+ ft_strdup — duplicate string 
 
 ---
 
-Part 3 – Linked List / Մաս 3 – կապակցված ցուցակ
+Part 2 – Additional Functions
 
- ft_lstnew — create new node / ստեղծել նոր հանգույց
+ ft_substr — create substring
 
- ft_lstadd_front — add node at the beginning / ավելացնել հանգույցը ցուցակի սկզբին
+ ft_strjoin — join two strings
 
- ft_lstsize — get list size / ստանալ ցուցակի չափը
+ ft_strtrim — trim characters from string
 
- ft_lstlast — get last node / ստանալ վերջին հանգույցը
+ ft_split — split string by delimiter
 
- ft_lstadd_back — add node at the end / ավելացնել հանգույցը ցուցակի վերջում
+ ft_itoa — convert integer to string
 
- ft_lstdelone — delete single node / ջնջել մեկ հանգույց
+ ft_strmapi — apply function to each char, return new string
 
- ft_lstclear — delete entire list / ջնջել ամբողջ ցուցակը
+ ft_striteri — apply function to each char in place
 
- ft_lstiter — apply function to each node / կիրառել ֆունկցիան յուրաքանչյուր հանգույցի վրա
+ ft_putchar_fd — output character to file descriptor
 
- ft_lstmap — create new list from function / ստեղծել նոր ցուցակ ֆունկցիայի հիման վրա
+ ft_putstr_fd — output string to file descriptor
+
+ ft_putendl_fd — output string with newline
+
+ ft_putnbr_fd — output integer to file descriptor
+ 
+---
+
+Part 3 – Linked List
+
+ ft_lstnew — create new node 
+
+ ft_lstadd_front — add node at the beginning
+
+ ft_lstsize — get list size
+ 
+ ft_lstlast — get last node
+
+ ft_lstadd_back — add node at the end
+
+ ft_lstdelone — delete single node
+
+ ft_lstclear — delete entire list
+
+ ft_lstiter — apply function to each node
+
+ ft_lstmap — create new list from function
