@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pars.c                                             :+:      :+:    :+:   */
+/*   finde_min.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/02 16:04:54 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/03 15:31:17 by agaleksa         ###   ########.fr       */
+/*   Created: 2026/03/08 17:18:43 by agaleksa          #+#    #+#             */
+/*   Updated: 2026/03/08 17:22:02 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_exit(t_node **a)
+t_node	*find_min(t_node *stack)
 {
-	if (a)
-		free_stack(a);
-	write(2, "Error\n", 6);
-	exit(1);
-}
+	t_node	*min;
 
-int	parse_arguments(int argc, char **argv, t_node **a)
-{
-	int		i;
-	int		value;
-	t_node	*new;
-
-	i = 1;
-	while (i < argc)
+	if (!stack)
+		return (NULL);
+	min = stack;
+	while (stack)
 	{
-		if (!is_valid_number(argv[i]))
-			error_exit(a);
-		value = ft_atoi_safe(argv[i], a);
-		new = new_node(value);
-		if (!new)
-			error_exit(a);
-		add_back(a, new);
-		i++;
+		if (stack->value < min->value)
+			min = stack;
+		stack = stack->next;
 	}
-	if (has_duplicates(*a))
-		error_exit(a);
-	return (0);
+	return (min);
 }

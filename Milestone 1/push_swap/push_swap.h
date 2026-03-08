@@ -6,7 +6,7 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 12:12:09 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/03 15:31:22 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/08 17:54:54 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@ typedef struct s_node
 int					parse_arguments(int argc, char **argv, t_node **a);
 int					is_valid_number(char *str);
 int					has_duplicates(t_node *a);
+
+/* ===================== UTILS ===================== */
+
+int					is_sorted(t_node *a);
+void				index_stack(t_node *a);
+t_node				*find_min(t_node *stack);
+int					get_position(t_node *stack, int value);
+void				rotate_to_top(t_node **a, int pos);
 
 /* ===================== STACK UTILS ===================== */
 
