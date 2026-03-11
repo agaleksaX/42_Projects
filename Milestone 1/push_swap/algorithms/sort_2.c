@@ -1,46 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   simple_sort.c                                      :+:      :+:    :+:   */
+/*   sort_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/08 17:30:52 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/11 16:33:06 by agaleksa         ###   ########.fr       */
+/*   Created: 2026/03/11 16:34:15 by agaleksa          #+#    #+#             */
+/*   Updated: 2026/03/11 16:36:40 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	simple_sort(t_node **a, t_node **b)
+void    sort_2(t_node **a)
 {
-	t_node	*min;
-	int		pos;
-	int		size;
-
-	if (is_sorted(a))
-		return ;
-	size = stack_size(*a);
-	if (size == 2)
-	{
-		sort_2(a);
-		return ;
-	}
-	else if (size == 3)
-	{
-		sort_3(a);
-		return ;
-	}
-	else
-	{
-		while (*a)
-		{
-			min = find_min(*a);
-			pos = get_position(*a, min->value);
-			rotate_to_top(a, pos);
-			pb(a, b);
-		}
-	}
-	while (*b)
-		pa(a, b);
+    if (is_sorted(*a))
+        return;
+    if ((*a)->value > (*a)->next->value)
+        sa(a);    
 }
