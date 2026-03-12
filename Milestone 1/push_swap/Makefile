@@ -5,6 +5,8 @@ CFLAGS = -Wall -Wextra -Werror -I.
 
 SRC = main.c \
 algorithms/simple_sort.c \
+algorithms/sort_2.c \
+algorithms/sort_3.c \
 operations/operation.c \
 operations/opr_push.c \
 operations/opr_rotate.c \
@@ -13,6 +15,7 @@ operations/opr_swap.c \
 parsing/pars.c \
 parsing/pars_utils.c \
 stack/stack_utils.c \
+utils/compute_disorder.c \
 utils/find_min.c \
 utils/get_position.c \
 utils/index_stack.c \
@@ -32,7 +35,7 @@ $(NAME): $(OBJ)
 clean:
 	rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

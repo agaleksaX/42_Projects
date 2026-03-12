@@ -6,7 +6,7 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/08 17:30:52 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/11 16:33:06 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:59:23 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	simple_sort(t_node **a, t_node **b)
 	int		pos;
 	int		size;
 
-	if (is_sorted(a))
+	if (is_sorted(*a))
 		return ;
 	size = stack_size(*a);
 	if (size == 2)

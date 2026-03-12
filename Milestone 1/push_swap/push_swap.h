@@ -6,7 +6,7 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 12:12:09 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/08 17:54:54 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:57:44 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ double				compute_disorder(t_node *a);
 /* ===================== ALGORITHMS ===================== */
 
 void				simple_sort(t_node **a, t_node **b);
+void				sort_2(t_node **a);
+void				sort_3(t_node **a);
 void				medium_sort(t_node **a, t_node **b);
 void				complex_sort(t_node **a, t_node **b);
 void				adaptive_sort(t_node **a, t_node **b);
