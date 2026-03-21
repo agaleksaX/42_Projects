@@ -4,14 +4,14 @@
 
 ---
 
-## Description / Նկարագրություն
+## Description
 
 Libft is a personal C library that reimplements a set of standard libc functions, additional useful functions, and linked list operations.  
 It helps understand how standard C functions work under the hood and allows you to use your own library in future assignments.
 
 ---
 
-## Project Goal / Նախագծի նպատակ
+## Project Goal
 
 - Reimplement libc functions with the `ft_` prefix.  
 - Create useful string, memory, and linked list manipulation functions.  
@@ -19,7 +19,7 @@ It helps understand how standard C functions work under the hood and allows you 
 
 ---
 
-## Tasks Completed / Արտադրված աշխատանքներ
+## Tasks Completed
 
 ---
 
