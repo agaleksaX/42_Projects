@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operation.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ssaghate <ssaghate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 16:04:02 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/03 15:30:56 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/21 16:41:37 by ssaghate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	swap_nodes(t_node **stack)
 {
-	t_node	*a;
-	t_node	*b;
+	int	tmp;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	a = *stack;
-	b = a->next;
-	a->next = b->next;
-	b->next = a;
-	*stack = b;
+	tmp = (*stack)->value;
+	(*stack)->value = (*stack)->next->value;
+	(*stack)->next->value = tmp;
 }
 
 void	push_nodes(t_node **from, t_node **to)

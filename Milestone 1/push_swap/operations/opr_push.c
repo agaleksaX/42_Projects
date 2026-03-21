@@ -6,20 +6,24 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 16:04:07 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/03 15:30:49 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/21 17:58:46 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_node **a, t_node **b)
+void	pa(t_program *p)
 {
-	push_nodes(b, a);
-	write(1, "pa\n", 3);
+	push_nodes(&(p->b), &(p->a));
+	p->stats.pa++;
+	if (!p->flags.bench_mode)
+		write(1, "pa\n", 3);
 }
 
-void	pb(t_node **a, t_node **b)
+void	pb(t_program *p)
 {
-	push_nodes(a, b);
-	write(1, "pb\n", 3);
+	push_nodes(&(p->a), &(p->b));
+	p->stats.pb++;
+	if (!p->flags.bench_mode)
+		write(1, "pb\n", 3);
 }

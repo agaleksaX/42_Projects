@@ -6,41 +6,34 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/08 17:30:52 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/12 17:59:23 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/18 18:34:13 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	simple_sort(t_node **a, t_node **b)
+void	simple_sort(t_program *p)
 {
 	t_node	*min;
 	int		pos;
 	int		size;
 
-	if (is_sorted(*a))
-		return ;
-	size = stack_size(*a);
-	if (size == 2)
+	size = stack_size(p->a);
+	if (size <= 5)
 	{
-		sort_2(a);
-		return ;
-	}
-	else if (size == 3)
-	{
-		sort_3(a);
+		sort_5(p);
 		return ;
 	}
 	else
 	{
-		while (*a)
+		while (p->a)
 		{
-			min = find_min(*a);
-			pos = get_position(*a, min->value);
-			rotate_to_top(a, pos);
-			pb(a, b);
+			min = find_min(p->a);
+			pos = get_position(p->a, min->value);
+			rotate_to_top(p, pos);
+			pb(p);
 		}
 	}
-	while (*b)
-		pa(a, b);
+	while (p->b)
+		pa(p);
 }

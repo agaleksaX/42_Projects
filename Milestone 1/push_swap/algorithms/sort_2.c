@@ -6,16 +6,16 @@
 /*   By: agaleksa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:34:15 by agaleksa          #+#    #+#             */
-/*   Updated: 2026/03/11 16:36:40 by agaleksa         ###   ########.fr       */
+/*   Updated: 2026/03/18 18:34:16 by agaleksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_2(t_node **a)
+void	sort_2(t_program *p)
 {
-    if (is_sorted(*a))
-        return;
-    if ((*a)->value > (*a)->next->value)
-        sa(a);    
+	if (is_sorted(p->a))
+		return ;
+	if ((p->a)->value > (p->a)->next->value)
+		sa(p);
 }
