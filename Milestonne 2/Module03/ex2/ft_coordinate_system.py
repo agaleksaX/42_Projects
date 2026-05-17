@@ -4,10 +4,8 @@ import math
 def get_player_pos() -> tuple[float, float, float]:
     while True:
         try:
-            user_input = input(
-                "Enter new coordinates as floats "
-                "in format 'x,y,z': "
-                )
+            user_input = input("Enter new coordinates as floats "
+                               "in format 'x,y,z': ")
             parts = user_input.split(",")
 
             try:

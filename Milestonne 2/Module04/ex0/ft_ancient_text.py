@@ -1,7 +1,7 @@
 import sys
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 2:
         print("Usage: ft_ancient_text.py <file>")
         sys.exit(1)
@@ -23,7 +23,7 @@ def main():
         print(f"File '{filename}' closed.")
 
     except Exception as e:
-        print(f"Error opening file '{filename}': {e}\n")
+        print(f"Error opening file '{filename}': {e}")
 
 
 if __name__ == "__main__":
